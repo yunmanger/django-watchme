@@ -1,0 +1,9 @@
+MIDlet-Name: watchme
+MIDlet-Version: 1.0.0
+MIDlet-Vendor: Buben.kz
+MIDlet-Jar-URL: Nokia-E55-en-watchme.jar
+MIDlet-Jar-Size: 152315
+MIDlet-Description: Watchme.kz client
+MIDlet-Icon: /icon.png
+MIDlet-Info-URL: http://buben.kz/p/django-watchme/
+MIDlet-1: Wathcme client,/icon.png,kz.buben.watchme.MainMIDlet
