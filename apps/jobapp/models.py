@@ -45,15 +45,19 @@ class DailyJob(models.Model):
         
     @models.permalink
     def del_link(self):
-        return ('dailyjob_delete',(),{'id': self.pk})
+        return ('dailyjob_delete',None,{'id': self.pk})
 
     @models.permalink
     def toggle_link(self):
-        return ('dailyjob_toggle',(),{'id': self.pk})
+        return ('dailyjob_toggle',None,{'id': self.pk})
+
+    @models.permalink
+    def edit_link(self):
+        return ('dailyjob_edit',None,{'id': self.pk})
     
     @models.permalink
     def stat_link(self):
-        return ('stat_dailyjob',(),{'id': self.pk})
+        return ('stat_dailyjob',None,{'id': self.pk})
     
     def __unicode__(self):
         return self.title

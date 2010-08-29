@@ -18,6 +18,7 @@ n: {{ object.n }}
 {% else %}
 <a class="btn btn-enable" href="{{ object.toggle_link }}" title="{{_("enable")}}">{{_("enable")}}</a>
 {% endif %}
+<a class="btn btn-edit" href="{{ object.edit_link }}" title="{{_("edit")}}">{{_("edit")}}</a>
 <a href="{{ object.del_link }}" onClick="if(!confirm('{{_("are you sure?")}}')){return false;}" class="btn btn-delete">delete</a>
 <a class="btn btn-go" href="{% url dailyjob_tickarch id=object.pk %}" title="{{_("ticks archive")}}">{{_("archive")}}</a>
 <a class="btn btn-go" href="{{ object.stat_link }}">statistics</a>

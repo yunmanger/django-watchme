@@ -32,14 +32,23 @@ def dailyjob_list(request, year=None, month=None, day=None, template_name="jobap
 
 
 @login_required
-def dailyjob_add(request, template_name="jobapp/dailyjob_form.html"):
+def dailyjob_add(request, id=None, template_name="jobapp/dailyjob_form.html"):
+    if id is None:
+        i = DailyJob()
+    else:
+        try:
+            i = DailyJob.objects.get(pk=int(id))
+        except DailyJob.DoesNotExist:
+            return Http404
+    
     if request.method == "POST":
-        form = DailyJobForm(request.POST)
+        form = DailyJobForm(request.POST,instance=i)
         if form.is_valid():
             s = form.save(user=request.user)
             return HttpResponseRedirect(reverse('dailyjob_list'))
     else:
-        form = DailyJobForm()
+        form = DailyJobForm(instance=i)
+
     c = RequestContext(request, {'form' : form, 'curpage': 'daily'})
     return render_to_response(template_name, c)
 
