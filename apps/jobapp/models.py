@@ -119,6 +119,15 @@ class Job(models.Model):
     #TODO: check if auto_now_add is right
     pub_date    = models.DateTimeField(auto_now_add=True)
 
+#class SubJobTick(models.Model):
+#    user        = models.ForeignKey(User)
+#    job         = models.ForeignKey(Job)
+#    start       = models.IntegerField(default=1)
+#    end         = models.IntegerField(default=1)
+#    done        = models.IntegerField(default=0, choices=
+#                                      (0, "not done"))
+
+
 #class PublicJob(models.Model):
 #    user        = models.ForeignKey(User)
 #    group       = models.ForeignKey('common.Group')

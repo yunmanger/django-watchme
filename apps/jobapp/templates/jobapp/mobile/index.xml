@@ -13,7 +13,7 @@
 			<title>{{ object.title }}</title>
 			<text>{{ object.text }}</text>
 			<n>{{ object.n }}</n>
-            <n>{{ object.importance }}</n>
+            <importance>{{ object.importance }}</importance>
               {% with object|get_latest_ticks:date as ticks %}
             <latest_ticks n="{{ ticks.count }}">
                 {% for tick in ticks %}
