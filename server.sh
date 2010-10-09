@@ -2,9 +2,10 @@
 
 pwd=$( readlink -f "$( dirname "$BASH_SOURCE" )" )
 . $pwd/env.sh
-. ./deploy/server.cfg.local
+. $pwd/deploy/server.cfg.local
+echo $PYTHONPATH
 
-uwsgi_cmd="$uwsgi_bin/uwsgi -s $socket -p 4 -M -t 20 -r -C -L -d ../wsgi_codeproject.log wsgi"
+uwsgi_cmd="$uwsgi_bin/uwsgi -s $socket -p 4 -M -t 20 -r -C -L -d ../wsgi_watchme.log wsgi"
 
 case $2 in
 "start")
