@@ -1,16 +1,24 @@
 #!/bin/bash
 
-. ./deploy/$1/dirs.cfg
+pwd=$( readlink -f "$( dirname "$BASH_SOURCE" )" )
+. $pwd/env.sh
+. ./deploy/server.cfg.local
 
-uwsgi_cmd="$uwsgi_bin/uwsgi -s $socket -p 4 -M -t 20 -r -C -L -d ../wsgi_watchme.log wsgi"
+uwsgi_cmd="$uwsgi_bin/uwsgi -s $socket -p 4 -M -t 20 -r -C -L -d ../wsgi_codeproject.log wsgi"
 
 case $2 in
 "start")
+if [ $1 != "workday" ]
+then
 $uwsgi_cmd
+fi
 sudo $nginx_bin/nginx -c $nginx_conf
 ;;
 "stop")
-ps aux | grep '$uwsgi_cmd' | grep -v grep | awk '{system("kill -9 " $2)}'
+if [ $1 != "workday" ]
+then
+ps aux | grep "$uwsgi_cmd" | grep -v grep | awk '{system("kill -9 " $2)}'
+fi
 sudo $nginx_bin/nginx -s stop -c $nginx_conf
 ;;
 "restart")

@@ -1,7 +1,7 @@
 PATH=/usr/bin:/bin
 DJANGO_HOME="/home/german/distr/django-trunk"
 PROJECT_HOME="/home/german/work"
-EXTRA_DIRS="$PROJECT_HOME/djangoejudge:$PROJECT_HOME/djangoejudge/apps:$PROJECT_HOME/djangoejudge/apps/zlibs"
+EXTRA_DIRS="$PROJECT_HOME/watchme:$PROJECT_HOME/watchme/apps"
 
 LOG_DIR=/home/german/tmp
 
@@ -15,9 +15,3 @@ then
 fi
 
 PYTHONPATH=$PYTHONPATH:$DJANGO_HOME:$PROJECT_HOME:$EXTRA_DIRS
-
-export DJANGO_HOME
-export PYTHONLIBS_HOME
-export PROJECT_HOME
-export PROJECT_BIN
-export PYTHONPATH
