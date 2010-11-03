@@ -1,0 +1,243 @@
+colors {
+   bgColor: #eef1e5;
+   highlightedBgColor: #848f60;
+   fontColor: rgb( 30, 85, 86 );
+   highlightedFontColor: white;
+   activeTabColor: #cccccc;
+   inactiveTabColor: #eeeeee;
+   screenBgColor: bgColor;
+   screenBgBottomColor: highlightedBgColor;
+   screenColorTop1: #eee;
+   screenColorBottom1: #ccc;
+   screenColorTop2: #eef;
+   screenColorBottom2: #ccd;
+   focusedFontColor: highlightedBgColor;
+   focusedBackgroundColor: bgColor;
+   focusedBorderColor: #000;
+}
+title {
+   padding-top: 15;
+   font-color: fontColor;
+   font-style: bold;
+   font-size: large;
+   font-face: proportional;
+   layout: expand | center;
+   background {
+        type: vertical-gradient;
+        top-color: #eee;
+        bottom-color: #ccc;
+        start: 2%;
+        end: 90%;
+    }
+}
+.startMenu {
+   padding: 10;
+   background-color: bgColor;
+   layout: horizontal-expand | horizontal-center | vertical-center;
+   focused-style: startMenuItemFocused;
+}
+.startMenuItem {
+   font-color: fontColor;
+   font-style: bold;
+   font-size: medium;
+   layout: expand | center;
+}
+.startMenuItemFocused {
+   background-color: highlightedBgColor;
+   font-style: bold;
+   font-size: medium;
+   border-color: highlightedBgColor;
+   border-width: 2;
+   font-color: highlightedFontColor;
+   layout: expand | center;
+}
+.listItself {
+   focused-style: listItemFocused;
+   background-color: bgColor;
+   layout: horizontal-expand | left;
+}
+.listItemFocused {
+   background-color: highlightedBgColor;
+   font-style: bold;
+   font-size: medium;
+   border-color: highlightedBgColor;
+   border-width: 2;
+   font-color: highlightedFontColor;
+   layout: expand | left;
+}
+/* ------------------------- tabform -------------------------*/
+.tabbedForm {
+	padding: 4;
+	layout: hcenter | vcenter;
+	background {
+		type: vertical-gradient;
+		top-color: screenBgColor;
+		bottom-color: screenBgBottomColor;
+		start: 10%;
+		end: 80%;
+		top: title;
+		bottom: menubar;
+	}
+	/* not supported because we use the extended menu bar:
+	menubar-color: menubarColor;
+	*/
+	scrollindicator-up-image: url( arrow_up.png );
+	scrollindicator-down-image: url( arrow_down.png );
+	/*title-style: solidTitle;*/
+}
+
+tabbar {
+	background-color: white;
+	layout: expand;
+	padding-bottom: 0;
+	tabbar-left-arrow: url( arrow_left.png );
+	tabbar-right-arrow: url( arrow_right.png );
+	tabbar-arrow-y-offset: 3;
+	tabbar-roundtrip: true;
+	/* not supported, since we use arrow images:
+	tabbar-scrolling-indicator-color: COLOR_FOREGROUND;
+	*/
+}
+
+activetab {
+	padding: 3;
+	padding-left: 10;
+	padding-right: 8;
+	padding-top: 7;
+	background-type: round-tab;
+	background-color: activeTabColor;
+	background-arc: 8;
+	font-color: black;
+	font-style: bold;
+}
+
+inactivetab {
+	margin-left: 2;
+	margin-right: 2;
+	margin-bottom: 1;
+	padding: 3;
+	padding-left: 6;
+	padding-right: 4;
+	background-type: round-tab;
+	background-color: inactiveTabColor;
+	background-arc: 8;
+	font-color: gray;
+}
+/* menu */
+
+colors {
+	overlay: argb( 136, 0, 0, 0 );
+}
+menu {
+	margin-left: 4;
+	margin-right: 4;
+	margin-bottom: -4; /* for the border */
+	min-width: 100;
+	padding: 2;
+	font-color: focusedFontColor;
+	font-size: small;
+	/* view-type: slide-up; */
+/*
+        border {
+		type: drop-shadow;
+		width: 4;
+		start-color: #aeee;
+		end-color: #2222;
+		orientation: top-right;
+	}
+*/
+	background {
+		type: horizontal-stripes;
+		first-top-color: screenColorTop1;
+		first-bottom-color: screenColorBottom1;
+		second-top-color: screenColorTop2;
+		second-bottom-color: screenColorBottom2;
+	}
+}
+
+
+/**
+  * The menuItem style is a predefined style
+  * for the actual commands in a fullscreen-menu.
+  * When the menuItem style is not defined,
+  * the menu style will be used instead.
+  */
+menuItem {
+	padding: 3;
+	padding-left: 10;
+	padding-right: 10;
+	font {
+		color: fontColor;
+		size: small;
+		style: bold;
+	}
+	layout: left;
+        /*
+	//#if ${ exists( arrowRight.png ) }
+		command-child-indicator: url(arrowRight.png);
+	//#else
+		command-child-indicator-color: blue;
+		command-child-indicator-width: 8;
+		command-child-indicator-height: 10;
+	//#endif
+        */
+}
+
+.menuItem:hover {
+	padding: 2;
+	padding-left: 9;
+	padding-right: 9;
+        background {
+		/*type: round-rect;*/
+		color: focusedBackgroundColor;
+		border-color: focusedBorderColor;
+	}
+	font {
+		style: bold;
+		size: small;
+		color: focusedFontColor;
+	}
+	layout: left | horizontal-expand;
+}
+
+/* tabbed pane*/
+
+.tabbedPaneIcons {
+	view-type: horizontal;
+	background {
+		type: vertical-gradient;
+		top-color: #f6f6f6;
+		bottom-color: #acadb1;
+	}
+	border {
+		top-width: 1;
+		color: #aaa;
+	}
+	/*layout: expand;*/
+}
+.tabIcon {
+	margin: 1px;
+	padding: 2px;
+	/*icon-image: url( Tab%INDEX%.png );*/
+	icon-image-align: bottom;
+	max-width: 33%;
+	/*font-bitmap: url( arialsmall.bmf );*/
+        focused-style: tabIconFocused;
+
+/*	layout: expand | center | vertical-center;*/
+}
+
+.tabIconFocused {
+	padding: 1px;
+	background {
+		type: round-rect;
+		arc: 8;
+		color: #f1f1f1;
+	}
+	border {
+		type: round-rect;
+		arc: 8;
+		color: #aeaeae;
+	}
+	/*icon-image: url( TabFoc%INDEX%.png );*/
+}

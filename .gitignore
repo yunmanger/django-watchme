@@ -1,2 +1,4 @@
 *.pyc
 *local*
+mobile/*/*/dist
+mobile/*/*/build

@@ -1,0 +1,67 @@
+#####################################################################################
+##                                                                                 ##
+## This file contains translations.                                                ##
+## See http://www.j2mepolish.org/cms/leftsection/documentation/localization.html   ##
+## for details.                                                                    ##
+##                                                                                 ##
+#####################################################################################
+
+# define this as a variable so that we re-use it later onwards within messages.txt itself:
+var:main.news=News
+
+# gestures:
+menu.title=Watchme.kz
+menu.enter=Enter
+menu.quit=Выход
+menu.dailyjobs=Еж. дела
+menu.settings=Настройки
+menu.back=Назад
+menu.save=Сохранить
+menu.done=Сделано
+menu.notdone=Не сделано
+menu.update=Обновить список
+
+# settings
+settings.accountsettings=Акаунт
+settings.programsettings=Общее
+settings.title=Настройки
+
+#global
+global.username=Имя
+global.password=Пароль
+global.warning=Внимание
+global.today=Сегодня
+global.yesterday=Вчера
+global.dbyesterday=Позовчера
+
+#jobs
+jobs.title=Еж. дела
+
+#alert
+alert.loaderror=Ошибка загрузки
+alert.saveerror=Ошибка сохранения
+
+polish.command.ok=OK
+polish.command.cancel=Отмена
+polish.command.select=Выбрать
+polish.command.mark=Отметить
+polish.command.unmark=Снять отметку
+polish.command.options=Меню
+# for deleting a single char:
+polish.command.delete=Удалить
+# for deleting a complete TextField:
+polish.command.clear=Стереть
+# for hiding menus on BlackBerry devices:
+polish.command.hide=Спрятать
+# for showing a default title when no label
+# is defined in a TextField. This is only
+# used when no direct input mode is activated:
+polish.title.input=Ввод
+# used for showing a screen for selecting symbols within TextFields:
+polish.command.entersymbol=Добавить символ
+# used by the HtmlBrowser for a links:
+polish.command.followlink=Перейти
+# used by the HtmlBrowser for submitting a form:
+polish.command.submit=Отправить
+# used by the RssBrowser for returning to the previous page:
+polish.command.back=Назад

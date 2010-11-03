@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="source/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/german/distr/J2ME-Polish2.1.4/import/cldc-1.1.jar"/>
+	<classpathentry kind="lib" path="/home/german/distr/J2ME-Polish2.1.4/import/midp-2.0.jar"/>
+	<classpathentry kind="lib" path="/home/german/distr/J2ME-Polish2.1.4/import/mmapi.jar"/>
+	<classpathentry kind="lib" path="/home/german/distr/J2ME-Polish2.1.4/import/nokia-ui.jar"/>
+	<classpathentry kind="lib" path="/home/german/distr/J2ME-Polish2.1.4/import/wmapi.jar"/>
+	<classpathentry kind="lib" path="/home/german/distr/J2ME-Polish2.1.4/import/enough-j2mepolish-client.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

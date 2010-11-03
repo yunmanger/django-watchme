@@ -1,0 +1,42 @@
+#####################################################################################
+##                                                                                 ##
+## This file contains translations.                                                ##
+## See http://www.j2mepolish.org/cms/leftsection/documentation/localization.html   ##
+## for details.                                                                    ##
+##                                                                                 ##
+#####################################################################################
+
+# define this as a variable so that we re-use it later onwards within messages.txt itself:
+var:main.news=News
+
+# gestures:
+menu.title=Watchme.kz
+menu.enter=Enter
+menu.quit=Quit
+menu.dailyjobs=Daily jobs
+menu.settings=Settings
+menu.back=Back
+menu.save=Save
+menu.done=Done
+menu.notdone=Not done
+menu.update=Update list
+
+# settings
+settings.accountsettings=Account
+settings.programsettings=General
+settings.title=Settings
+
+#global
+global.username=Username
+global.password=Password
+global.warning=Warnging
+global.today=Today
+global.yesterday=Yesterday
+global.dbyesterday=Before yest.
+
+#jobs
+jobs.title=Dailyjobs
+
+#alert
+alert.loaderror=Load Error
+alert.saveerror=Save Error
