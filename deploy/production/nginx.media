@@ -1,14 +1,10 @@
 server {
     listen       80;
-    server_name  wm.buben.kz;
-
-    access_log logs/wm.access.log;
-    error_log logs/wm.error.log;
-
-    location / {
-        uwsgi_pass unix:/opt/nginx/sock/wm.production.sock;
-        include uwsgi_params;
-    }
+    server_name  wmedia.buben.kz;
+    
+    keepalive_timeout  65;
+    access_log logs/wmedia.access.log;
+    error_log logs/wmedia.error.log;
 
     location /media/admin/ {
         alias /opt/envs/wm/src/django-trunk/django/contrib/admin/media/;

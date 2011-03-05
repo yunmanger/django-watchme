@@ -1,0 +1,9 @@
+-e svn+http://code.djangoproject.com/svn/django/trunk/#egg=django-trunk
+#django==1.2.3
+south
+django-robots
+django-uni-form<0.7
+django-registration
+django-invitation
+markdown
+sorl

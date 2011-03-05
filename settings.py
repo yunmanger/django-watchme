@@ -136,7 +136,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.sitemaps',
 
-    'django-backup',
+#    'django-backup',
 #    'tagging',
     'south',
     'sorl.thumbnail',
